@@ -4,24 +4,24 @@ class Dog
   def initialize(name)
     @name = name 
     # @@all << self
-    save
+    save #puts method into initialize
   end
-  def self.all 
+  def self.all #when use .all will show @@all array
     @@all
   end 
   
-  def self.clear_all 
+  def self.clear_all #clears the array
     @@all.clear
   end
   
-  def self.print_all 
+  def self.print_all #iterates through array and prints each dogs name. 
    @@all.map do |dog_name|
     puts  dog_name.name
   end
 end
 
   def save
-    @@all.push(self)
+    @@all.push(self) #instance method that adds new dog to @@all array
   end
   
   
